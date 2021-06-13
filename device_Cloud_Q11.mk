@@ -135,6 +135,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     Snap
 
+# SDGallery
+PRODUCT_PACKAGES += \
+    SDGallery
+
 
 # MIXPlorer+Archieve Addon
 PRODUCT_PACKAGES += \
