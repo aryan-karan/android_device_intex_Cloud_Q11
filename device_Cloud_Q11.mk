@@ -135,6 +135,12 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     Snap
 
+
+# MIXPlorer+Archieve Addon
+PRODUCT_PACKAGES += \
+    MIXplorer \
+	MIXplorer_Archieve
+
 # mrdump related
 PRODUCT_PACKAGES += \
     libmrdump \
