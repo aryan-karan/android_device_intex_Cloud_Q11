@@ -139,6 +139,11 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     SDGallery
 
+# Music Apps
+PRODUCT_PACKAGES += \
+    PulseMusic \
+	Apollo \
+	RetroMusicPlayer
 
 # New Trebuchet Added too
 PRODUCT_PACKAGES += \
