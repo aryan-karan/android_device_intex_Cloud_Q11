@@ -147,7 +147,7 @@ PRODUCT_PACKAGES += \
 
 # New Trebuchet Added too
 PRODUCT_PACKAGES += \
-    Trebuchet_new
+    Trebuchet
 
 # MIXPlorer+Archieve Addon
 PRODUCT_PACKAGES += \
