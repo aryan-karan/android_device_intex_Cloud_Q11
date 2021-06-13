@@ -140,10 +140,18 @@ PRODUCT_PACKAGES += \
     SDGallery
 
 
+# New Trebuchet Added too
+PRODUCT_PACKAGES += \
+    Trebuchet_new
+
 # MIXPlorer+Archieve Addon
 PRODUCT_PACKAGES += \
     MIXplorer \
 	MIXplorer_Archieve
+
+# Organic Chemistry
+PRODUCT_PACKAGES += \
+    ReangentsAndTheirFunctions
 
 # mrdump related
 PRODUCT_PACKAGES += \
