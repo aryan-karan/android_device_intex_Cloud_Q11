@@ -8,7 +8,7 @@ Device Tree for LineageOS 14.1
 | Chipset | MT6580 |
 | Kernel | Marshmallow 6.0 (3.18.19+) |
 | Display | 5,0" 1280x720 |
-| Battery | 2200MAh |
+| Battery | 2800MAh |
 | Storage | 1GB RAM, 8GB storage |
 | Camera | 8MP rear / 2MP front |
 
@@ -20,8 +20,8 @@ Bug	tracker
 Compiling on Ubuntu 18.04/20.10
 ---------------
 First add device patches from device tree into Lineage
-```
 . build/envsetup.sh 
+```
 
 export JACK_SERVER_VM_ARGUMENTS="-Dfile.encoding=UTF-8 -XX:+TieredCompilation -Xmx4096m"
 
