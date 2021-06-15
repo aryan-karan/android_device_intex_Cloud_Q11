@@ -1,5 +1,4 @@
-# system.prop
-# Intex Cloud Q11
+# system.prop for Intex Cloud Q11
 
 # MTK, Infinity, 20090720 {
 wifi.interface=wlan0

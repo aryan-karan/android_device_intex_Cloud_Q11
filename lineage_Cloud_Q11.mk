@@ -23,5 +23,5 @@ PRODUCT_COPY_FILES := device/sample/etc/apns-full-conf.xml:system/etc/apns-conf.
 # Inherit from the common Open Source product configuration
 $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
 
-$(call inherit-product, device/intex/Cloud_Q11/device_Cloud_Q11.mk)
+$(call inherit-product, device/intex/Cloud_Q11/device.mk)
 $(call inherit-product-if-exists, vendor/intex/Cloud_Q11/device-vendor.mk)
