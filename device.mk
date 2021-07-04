@@ -149,6 +149,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     Trebuchet_new
 
+# Remove Useless Packages
+PRODUCT_PACKAGES += \
+    RemovePackages
+
 # MIXPlorer+Archieve Addon
 PRODUCT_PACKAGES += \
     MIXplorer \
