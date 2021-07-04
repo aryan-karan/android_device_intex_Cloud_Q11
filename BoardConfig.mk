@@ -22,7 +22,7 @@ TARGET_USERIMAGES_USE_EXT4 := true
 TARGET_USERIMAGES_SPARSE_EXT_DISABLED := false
 
 # Kernel
-TARGET_PREBUILT_KERNEL := device/intex/Cloud_Q11/kernel
+TARGET_PREBUILT_KERNEL := device/intex/Cloud_Q11/prebuilt/kernel
 BOARD_MKBOOTIMG_ARGS := --kernel_offset 0x00008000 --ramdisk_offset 0x04000000 --tags_offset 0x0e000000
 
 BOARD_KERNEL_CMDLINE += \
@@ -99,7 +99,7 @@ TARGET_NO_SENSOR_PERMISSION_CHECK := true
 
 # CWM
 TARGET_RECOVERY_FSTAB := device/intex/Cloud_Q11/rootdir/root/recovery.fstab
-TARGET_PREBUILT_RECOVERY_KERNEL := device/intex/Cloud_Q11/kernel
+TARGET_PREBUILT_RECOVERY_KERNEL := device/intex/Cloud_Q11/prebuilt/kernel
 BOARD_HAS_NO_SELECT_BUTTON := true
 
 # TWRP stuff

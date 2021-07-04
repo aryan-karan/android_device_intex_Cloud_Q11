@@ -31,7 +31,7 @@ PRODUCT_PACKAGE_OVERLAYS += device/intex/Cloud_Q11/overlay # enable this to be a
 
 LOCAL_PATH := device/intex/Cloud_Q11
 ifeq ($(TARGET_PREBUILT_KERNEL),)
-	LOCAL_KERNEL := $(LOCAL_PATH)/kernel
+	LOCAL_KERNEL := $(LOCAL_PATH)/prebuilt/kernel
 else
 	LOCAL_KERNEL := $(TARGET_PREBUILT_KERNEL)
 endif
