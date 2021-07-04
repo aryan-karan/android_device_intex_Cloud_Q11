@@ -1,6 +1,6 @@
 LOCAL_PATH := $(call my-dir)
 include $(CLEAR_VARS)
-LOCAL_MODULE := Trebuchet1
+LOCAL_MODULE := Trebuchet_new
 LOCAL_MODULE_TAGS := optional
 LOCAL_SRC_FILES := Trebuchet.apk
 LOCAL_CERTIFICATE := PRESIGNED
