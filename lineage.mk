@@ -19,10 +19,10 @@ PRODUCT_RELEASE_NAME := Intex Cloud Q11
 #    BUILD_FINGERPRINT=alps/6.0/MRA58K/1470300415:user/test-keys \
 #    PRIVATE_BUILD_DESC="full_vsun6580_we_m-user 6.0 MRA58K 1470300415 test-keys"
 
-BUILD_FINGERPRINT := "google/redfin/redfin:11/RQ3A.210605.005/7349499:user/release-keys"
+BUILD_FINGERPRINT := "google/redfin/redfin:11/RQ3A.210705.001/7380771:user/release-keys"
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    PRIVATE_BUILD_DESC="redfin-user 11 RQ3A.210605.005 7349499 release-keys"
+    PRIVATE_BUILD_DESC="redfin-user 11 RQ3A.210705.001 7380771 release-keys"
 
 # SuperUser
 WITH_SU := false
