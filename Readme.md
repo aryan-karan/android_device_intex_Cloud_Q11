@@ -12,6 +12,11 @@ Device Tree for LineageOS 14.1
 | Storage | 1GB RAM, 8GB storage |
 | Camera | 8MP rear / 2MP front |
 
+Clone Command
+---
+```
+git clone https://github.com/aryankaran/android_device_intex_Cloud_Q11.git device/intex/Cloud_Q11 && git clone https://github.com/Evolution-X-Modded-By-Aryan/android_vendor_intex_Cloud_Q11.git vendor/intex/Cloud_Q11
+```
 Bug	tracker
 ---------------
 - [ ] Video recording interchanged color (workarround: any third party camera, like footej)
