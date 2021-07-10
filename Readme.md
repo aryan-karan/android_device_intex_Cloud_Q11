@@ -68,9 +68,11 @@ brunch Cloud_Q11
 Jack Fix 
 ---------------
 
-1. Remove TLSv1, TLSv1.1 from jdk.tls.disabledAlgorithms in /etc/java-8-openjdk/security/java.security file
-2. Restart the jack server: cd /prebuilts/sdk/tools/ ./jack-admin kill-server ./jack-admin start-server
-
+1. Remove TLSv1, TLSv1.1 from jdk.tls.disabledAlgorithms in /etc/java-8-openjdk/security/java.security file | Its near ends
+2. Restart the jack server:
+```
+cd prebuilts/sdk/tools && ./jack-admin kill-server && ./jack-admin start-server && cd ../../..
+```
 
 Result
 ---------------
