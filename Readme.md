@@ -63,6 +63,13 @@ export LC_ALL=C
 
 brunch Cloud_Q11
 ```
+
+Java 8 Fix
+---
+```
+ sudo apt install openjdk-8-jdk -y && sudo update-alternatives --config java
+```
+
 Jack Fix 
 ---------------
 
