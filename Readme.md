@@ -67,6 +67,10 @@ brunch Cloud_Q11
 Java 8 Fix
 ---
 ```
+ sudo apt install openjdk-8-jdk -y && sudo update-java-alternatives -s java-1.8.0-openjdk-amd64
+```
+OR
+```
  sudo apt install openjdk-8-jdk -y && sudo update-alternatives --config java
 ```
 
