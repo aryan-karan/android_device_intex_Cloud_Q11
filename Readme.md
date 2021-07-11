@@ -43,6 +43,28 @@ and ommit this line present at end of file
 
 neverallowxperm mediaserver domain:{ rawip_socket tcp_socket udp_socket } ioctl priv_sock_ioctls;
 
+Jack Fix 
+---------------
+
+1. Remove TLSv1, TLSv1.1 from jdk.tls.disabledAlgorithms in /etc/java-8-openjdk/security/java.security file | Its near ends
+   ```
+   sudo nano /etc/java-8-openjdk/security/java.security
+   ```
+3. Restart the jack server:
+```
+cd prebuilts/sdk/tools && ./jack-admin kill-server && ./jack-admin start-server && cd ../../..
+```
+
+Java 8 Fix
+---
+```
+ sudo apt install openjdk-8-jdk -y && sudo update-java-alternatives -s java-1.8.0-openjdk-amd64
+```
+OR
+```
+ sudo apt install openjdk-8-jdk -y && sudo update-alternatives --config java
+```
+
 Build
 ---------------
 ```
@@ -62,28 +84,6 @@ export JACK_SERVER_VM_ARGUMENTS="-Dfile.encoding=UTF-8 -XX:+TieredCompilation -X
 export LC_ALL=C
 
 brunch Cloud_Q11
-```
-
-Java 8 Fix
----
-```
- sudo apt install openjdk-8-jdk -y && sudo update-java-alternatives -s java-1.8.0-openjdk-amd64
-```
-OR
-```
- sudo apt install openjdk-8-jdk -y && sudo update-alternatives --config java
-```
-
-Jack Fix 
----------------
-
-1. Remove TLSv1, TLSv1.1 from jdk.tls.disabledAlgorithms in /etc/java-8-openjdk/security/java.security file | Its near ends
-   ```
-   sudo nano /etc/java-8-openjdk/security/java.security
-   ```
-3. Restart the jack server:
-```
-cd prebuilts/sdk/tools && ./jack-admin kill-server && ./jack-admin start-server && cd ../../..
 ```
 
 Result
