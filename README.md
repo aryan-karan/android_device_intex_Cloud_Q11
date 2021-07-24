@@ -12,6 +12,37 @@ Device Tree for LineageOS 14.1
 | Storage | 1GB RAM, 8GB storage |
 | Camera | 8MP rear / 2MP front |
 
+Add you user name
+-----------------
+Lets crate user named aryan 
+
+```
+   sudo adduser aryan && sudo usermod -aG sudo aryan && su aryan
+```
+
+On Gitpod Needed If on /workspace space is greater than /
+```
+   sudo su
+   cd .. && mkdir aryan && rm -rf /home/aryan && ln -s /workspace/aryan /home/aryan && chown -R aryan:aryan /home/aryan && chown -R aryan:aryan /workspace && cd /home/aryan && pwd && chmod 717 /work*/* && exit
+   cd /home/aryan
+```
+
+Change Timezone
+----
+```
+sudo dpkg-reconfigure tzdata
+```
+
+Check timezone :
+```
+cat /etc/timezone
+```
+
+Check Date & Time :
+```
+date
+```
+
 Environment Setup
 ---
 ```
@@ -22,10 +53,10 @@ sudo apt install openjdk-8-jdk -y && sudo update-java-alternatives -s java-1.8.0
 Clone Command + Patches (screen)
 ---
 Screen
-``
+```
 cd ~
 screen -S los14
-``
+```
 ```
 mkdir los14 && cd los14
 repo init -u git://github.com/LineageOS/android.git -b cm-14.1
