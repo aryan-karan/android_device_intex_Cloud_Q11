@@ -60,6 +60,7 @@ screen -S los14
 ```
 git config --global user.name "Aryan Karan"
 git config --global user.email "aryankaran28022004@gmail.com"
+cd ~
 mkdir los14 && cd los14
 repo init -u git://github.com/LineageOS/android.git -b cm-14.1
 repo sync -c -j`expr 2 \* $(nproc --all)` --force-sync --no-clone-bundle --no-tags
@@ -70,6 +71,14 @@ cd ../../../..
 ```
 
 After this do neverallow fix and jack (java security) fix as below :-
+i.e.,
+```
+nano system/sepolicy/mediaserver.te
+```
+**AND**
+```
+sudo nano /etc/java-8-openjdk/security/java.security
+```
 
 Bug	tracker
 ---------------
