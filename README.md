@@ -15,15 +15,18 @@ Device Tree for LineageOS 14.1
 Environment Setup
 ---
 ```
-sudo apt update && cd ~ && sudo apt install git aria2 -y && git clone https://github.com/aryankaran/scripts_build.git && cd scripts && sudo bash setup/android_build_env.sh && cd .. && rm -rf scripts
+sudo apt update && cd ~ && sudo apt install git aria2 -y && git clone https://github.com/aryankaran/scripts_build.git scripts && cd scripts && sudo bash setup/android_build_env.sh && cd .. && rm -rf scripts
 sudo apt install openjdk-8-jdk -y && sudo update-java-alternatives -s java-1.8.0-openjdk-amd64
 ```
 
 Clone Command + Patches (screen)
 ---
-```
+Screen
+``
 cd ~
 screen -S los14
+``
+```
 mkdir los14 && cd los14
 repo init -u git://github.com/LineageOS/android.git -b cm-14.1
 repo sync -c -j`expr 2 \* $(nproc --all)` --force-sync --no-clone-bundle --no-tags
