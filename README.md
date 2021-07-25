@@ -61,8 +61,7 @@ git config --global user.name "Aryan Karan"
 git config --global user.email "aryankaran28022004@gmail.com"
 cd ~
 mkdir los14 && cd los14
-repo init -u git://github.com/LineageOS/android.git -b cm-14.1 && repo sync -c -j`expr 2 \* $(nproc --all)` --force-sync --no-clone-bundle --no-tags
-git clone https://github.com/aryankaran/android_device_intex_Cloud_Q11.git device/intex/Cloud_Q11 && git clone https://github.com/Evolution-X-Modded-By-Aryan/android_vendor_intex_Cloud_Q11.git vendor/intex/Cloud_Q11
+repo init -u git://github.com/LineageOS/android.git -b cm-14.1 && repo sync -c -j`expr 2 \* $(nproc --all)` --force-sync --no-clone-bundle --no-tags && git clone https://github.com/aryankaran/android_device_intex_Cloud_Q11.git device/intex/Cloud_Q11 && git clone https://github.com/Evolution-X-Modded-By-Aryan/android_vendor_intex_Cloud_Q11.git vendor/intex/Cloud_Q11
 cd device/intex/Cloud_Q11/patches
 bash apply-patches.sh
 cd ../../../..
@@ -126,12 +125,14 @@ OR
     sudo apt install openjdk-8-jdk -y && sudo update-alternatives --config java
    ```
 
-Build
+Build with backed up ccache
 ---------------
 ```
 . build/envsetup.sh
 export USE_CCACHE=1
-export CCACHE_EXEC=/usr/bin/ccache
+export CCACHE_DIR=~/ccache
+ccache -s
+export CCACHE_EXEC=$(which ccache)
 ccache -M 100G
 
 export JACK_SERVER_VM_ARGUMENTS="-Dfile.encoding=UTF-8 -XX:+TieredCompilation -Xmx4096m"
