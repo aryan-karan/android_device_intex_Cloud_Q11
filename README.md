@@ -17,14 +17,14 @@ Add you user name
 Lets crate user named aryan 
 
 ```
-   sudo adduser aryan && sudo usermod -aG sudo aryan && su aryan
+sudo adduser aryan && sudo usermod -aG sudo aryan && su aryan
 ```
 
 On Gitpod Needed If on /workspace space is greater than /
 ```
-   sudo su
-   cd .. && mkdir aryan && rm -rf /home/aryan && ln -s /workspace/aryan /home/aryan && chown -R aryan:aryan /home/aryan && chown -R aryan:aryan /workspace && cd /home/aryan && pwd && chmod 717 /work*/* && exit
-   cd /home/aryan
+sudo su
+cd .. && mkdir aryan && rm -rf /home/aryan && ln -s /workspace/aryan /home/aryan && chown -R aryan:aryan /home/aryan && chown -R aryan:aryan /workspace && cd /home/aryan && pwd && chmod 717 /work*/* && exit
+cd /home/aryan
 ```
 
 Change Timezone
@@ -49,6 +49,11 @@ Environment Setup
 sudo apt update && cd ~ && sudo apt install git aria2 -y && git clone https://github.com/aryankaran/scripts_build.git scripts && cd scripts && sudo bash setup/android_build_env.sh && cd .. && rm -rf scripts && sudo apt install openjdk-8-jdk -y && sudo update-java-alternatives -s java-1.8.0-openjdk-amd64
 ```
 
+**And** Important ****
+```
+sudo nano /etc/java-8-openjdk/security/java.security
+```
+
 Clone Command + Patches (screen)
 ---
 Screen
@@ -56,6 +61,7 @@ Screen
 cd ~
 screen -S los14
 ```
+
 ```
 git config --global user.name "Aryan Karan"
 git config --global user.email "aryankaran28022004@gmail.com"
@@ -67,14 +73,10 @@ bash apply-patches.sh
 cd ../../../..
 ```
 
-After this do neverallow fix and jack (java security) fix as below :-
+After this do neverallow sepolicy fix as below :-
 i.e.,
 ```
 nano system/sepolicy/mediaserver.te
-```
-**AND**
-```
-sudo nano /etc/java-8-openjdk/security/java.security
 ```
 
 Bug	tracker
@@ -83,7 +85,7 @@ Bug	tracker
 - [ ] Sometimes Number of shown cpu cores are 2 or 3 not 4 just a reboot fixes that..
 - [ ] Some app glitches are present (app crashes has been fixed, glitches are left)
 
-Compiling on Ubuntu 18.04/20.10
+Compiling on Ubuntu 18.04/20.04
 ---------------
 
 First add device patches from device tree into Lineage i.e, sepolicy 29 patches
@@ -117,13 +119,13 @@ Jack Fix
 
 Java 8 Fix
 ---
-   ```
-    sudo apt install openjdk-8-jdk -y && sudo update-java-alternatives -s java-1.8.0-openjdk-amd64
-   ```
+```
+sudo apt install openjdk-8-jdk -y && sudo update-java-alternatives -s java-1.8.0-openjdk-amd64
+```
 OR
-   ```
-    sudo apt install openjdk-8-jdk -y && sudo update-alternatives --config java
-   ```
+```
+sudo apt install openjdk-8-jdk -y && sudo update-alternatives --config java
+```
 
 Build with backed up ccache
 ---------------
