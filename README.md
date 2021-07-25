@@ -130,6 +130,12 @@ OR
 sudo apt install openjdk-8-jdk -y && sudo update-alternatives --config java
 ```
 
+Gitpod java-11 persisting problem change to jdk-8
+---
+```
+   sudo apt install openjdk-8-jdk -y && sudo update-alternatives --config java && cd /usr/lib/jvm && sudo rm -rf default-java java-1.11.0-openjdk-amd64 java-11-openjdk-amd64 .java-1.11.0-openjdk-amd64.jinfo && sudo ln -s java-1.8.0-openjdk-amd64 default-java && cd && sudo rm -rf /home/gitpod/.sdkman/candidates/java/11.0.11.fx-zulu && sudo ln -s /usr/lib/jvm/java-8-openjdk-amd64 /home/gitpod/.sdkman/candidates/java/11.0.11.fx-zulu && java -version && whereis java
+```
+
 Build with backed up ccache
 ---------------
 ```
