@@ -78,10 +78,10 @@ cd ../../../..
 
 After this do neverallow sepolicy fix as below :-
 i.e.,
+ 
 ```
-nano system/sepolicy/mediaserver.te
+sed -i 's/neverallowxperm mediaserver domain/# neverallowxperm mediaserver domain/' system/sepolicy/mediaserver.te
 ```
-
 Bug	tracker
 ---------------
 - [ ] Video recording interchanged color (workarround: any third party camera, like footej)
@@ -102,7 +102,7 @@ cd ../../../..
 Build Error neverallow Fix before build
 ---------------
 ```
-nano system/sepolicy/mediaserver.te
+sed -i 's/neverallowxperm mediaserver domain/# neverallowxperm mediaserver domain/' system/sepolicy/mediaserver.te
 ```
 and ommit this line present at end of file
 
