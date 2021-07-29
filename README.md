@@ -51,6 +51,10 @@ sudo apt update && cd ~ && sudo apt install git aria2 -y && git clone https://gi
 
 **And** Important ****
 ```
+sudo sed -i 's/, TLSv1, TLSv1.1//' /etc/java-8-openjdk/security/java.security
+```
+OR manual
+```
 sudo nano /etc/java-8-openjdk/security/java.security
 ```
 
@@ -112,6 +116,10 @@ Jack Fix
 ---------------
 
 1. Remove TLSv1, TLSv1.1 from jdk.tls.disabledAlgorithms in /etc/java-8-openjdk/security/java.security file | Its near ends
+   ```
+   sudo sed -i 's/, TLSv1, TLSv1.1//' /etc/java-8-openjdk/security/java.security
+   ```
+   OR manually
    ```
    sudo nano /etc/java-8-openjdk/security/java.security
    ```
